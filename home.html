@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nes-jay P. Bacal - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #000; 
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            position: relative;
+        }
+
+        nav a:hover, .active {
+            color: #FFA500 !important;
+            transform: scale(1.1);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFA500;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding-top: 100px; 
+        }
+
+        .hero-text {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: #FFA500;
+        }
+
+        .profile {
+            background: #FFA500;
+            border-radius: 50%;
+            padding: 15px;
+            width: 400px;
+            height: 400px;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .profile img {
+            width: 125%;
+            position: relative;
+            bottom: 0;
+        }
+
+        .social-icons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icons img {
+            width: 30px;
+            transition: transform 0.3s;
+            filter: invert(1);
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                top: 0;
+                padding: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile {
+                width: 250px;
+                height: 250px;
+                margin-top: 2rem;
+            }
+
+            .profile img {
+                width: 115%;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+            .hero {
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Hello! It's me</h2><h1>Nes-jay P. Bacal</h1>
+                <h3>──── <span class="highlight">Front End Developer</span></h3>
+                <p>Welcome to my portfolio website!</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/winternyawnyaw" target="_blank" rel="noopener noreferrer">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/iateeighty88" target="_blank" rel="noopener noreferrer">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://github.com/JaySternritter" target="_blank" rel="noopener noreferrer">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+            <div class="profile">
+                <img src="https://raw.githubusercontent.com/JaySternritter/images/refs/heads/main/programmer-png-favpng-q4ix7U3riLWwh7rCZ6Km2b9HS-removebg-preview.png" alt="Profile">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nes-jay P. Bacal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+            margin-top: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #000; 
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFA500;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover,
+        .active {
+            color: #FFA500 !important;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .highlight {
+            color: #FFA500;
+        }
+
+        .contact-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 60px;
+        }
+
+        .contact-items {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: #111;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            border: 2px solid #FFA500;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            opacity: 0;
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        .contact-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #FFA500;
+        }
+
+        @media (min-width: 768px) {
+            .contact-card {
+                flex-direction: row; 
+                justify-content: flex-start; 
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .contact-info p {
+                margin-left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="contact-container">
+            <h1>Contact <span class="highlight">ME!</span></h1>
+            <div class="contact-items">
+                <div class="contact-card">
+                    <a href="tel:+639662713495">
+                        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone" class="contact-icon" style="filter: invert(1);">
+                        <div class="contact-info">
+                            <h3>Phone Number</h3>
+                            <p>+639662713495</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <a href="mailto:legisjay@gmail.com">
+                        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="contact-icon" style="filter: invert(1);">
+                        <div class="contact-info">
+                            <h3>Email Address</h3>
+                            <p>legisjay@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

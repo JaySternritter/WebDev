@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Nes-jay P. Bacal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #000;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFA500;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover,
+        .active {
+            color: #FFA500 !important;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            min-height: 100vh;
+            padding-top: 100px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        .about-profile {
+            background: #FFA500;
+            border-radius: 50%;
+            padding: 20px;
+            width: 500px;
+            height: 500px;
+            animation: slideInRight 1s ease-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .about-profile img {
+            width: 125%;
+        }
+
+        .highlight {
+            color: #FFA500;
+        }
+
+        .about-text h1 {
+            font-size: 4rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                top: 0;
+                right: 10px;
+                padding: 10px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-profile {
+                width: 300px;
+                height: 300px;
+            }
+
+            .about-profile img {
+                width: 115%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="about-content">
+            <div class="about-profile">
+                <img src="https://raw.githubusercontent.com/JaySternritter/images/refs/heads/main/programmer-png-favpng-q4ix7U3riLWwh7rCZ6Km2b9HS-removebg-preview.png" alt="Profile">
+            </div>
+            <div class="about-text">
+                <h1>About <span class="highlight">ME</span></h1>
+                <h2>Front End Developer</h2>
+                <p>Hello everyone! I'm Nes-Jay P. Bacal, and I'm an 18-year-old first-year college student majoring in Bachelor of Science in Information Technology
+                  (BSIT). I'm passionate about technology and its endless possibilities to shape the future. Currently, I'm diving into the world of front-end development 
+                  and learning the ropes of web design and development. As a beginner, I'm exploring HTML, CSS, and JavaScript, and I'm excited to see how these languages 
+                  work together to build functional and attractive websites.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
